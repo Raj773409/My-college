@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Exams</title></head>
+<body>
+  <h2>Available Exams</h2>
+  <ul>
+    {% for exam in exams %}
+      <li><a href="/take_exam/{{ exam[0] }}">{{ exam[1] }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>

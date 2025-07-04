@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>{{ exam[1] }}</title></head>
+<body>
+  <h2>{{ exam[1] }}</h2>
+  <form method="POST" action="/submit_exam/{{ exam[0] }}">
+    {% for q in questions %}
+      <p><b>{{ q[2] }}</b></p>
+      <input type="radio" name="q{{ q[0] }}" value="a" required> {{ q[3] }}<br>
+      <input type="radio" name="q{{ q[0] }}" value="b"> {{ q[4] }}<br>
+      <input type="radio" name="q{{ q[0] }}" value="c"> {{ q[5] }}<br>
+      <input type="radio" name="q{{ q[0] }}" value="d"> {{ q[6] }}<br>
+    {% endfor %}
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

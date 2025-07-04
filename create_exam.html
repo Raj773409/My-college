@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Create Exam</title></head>
+<body>
+  <h2>Create New Exam</h2>
+  <form method="POST">
+    <input type="text" name="title" placeholder="Exam Title" required><br><br>
+    {% for i in range(1, 4) %}
+      <p>Question {{ i }}</p>
+      <input type="text" name="q{{i}}" placeholder="Question"><br>
+      <input type="text" name="a{{i}}" placeholder="Option A">
+      <input type="text" name="b{{i}}" placeholder="Option B">
+      <input type="text" name="c{{i}}" placeholder="Option C">
+      <input type="text" name="d{{i}}" placeholder="Option D"><br>
+      <input type="text" name="ans{{i}}" placeholder="Correct Option (a/b/c/d)"><br><br>
+    {% endfor %}
+    <button type="submit">Create</button>
+  </form>
+</body>
+</html>

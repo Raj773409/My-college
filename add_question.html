@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Add Question</title></head>
+<body>
+  <h2>Add Question to "{{ exam[1] }}"</h2>
+  <form method="POST">
+    <input type="hidden" name="exam_id" value="{{ exam[0] }}">
+    <input type="text" name="question" placeholder="Question" required><br>
+    <input type="text" name="a" placeholder="Option A" required><br>
+    <input type="text" name="b" placeholder="Option B" required><br>
+    <input type="text" name="c" placeholder="Option C" required><br>
+    <input type="text" name="d" placeholder="Option D" required><br>
+    <input type="text" name="correct" placeholder="Correct Option (a/b/c/d)" required><br>
+    <button type="submit">Add Question</button>
+  </form>
+</body>
+</html>

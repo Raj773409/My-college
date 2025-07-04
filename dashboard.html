@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dashboard</title></head>
+<body>
+  <h2>Dashboard</h2>
+  <a href="/post">Create New Post</a>
+  <ul>
+    {% for post in posts %}
+      <li>
+        <p>{{ post[2] }}</p>
+        {% if post[3] %}
+          <a href="/static/uploads/{{ post[3] }}">{{ post[3] }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
